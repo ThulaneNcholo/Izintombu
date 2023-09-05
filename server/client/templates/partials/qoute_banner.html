@@ -1,0 +1,52 @@
+{% load static %}
+
+<style>
+  :root {
+    --primary_color: #700c21;
+    --secondary_color: #1563a2;
+  }
+
+  .qoute_banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("{% static '/images/construction_image.jpg' %}");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  .qoute_title {
+    color: white;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 75px;
+  }
+
+  .qoute_btn {
+    background-color: var(--secondary_color);
+    width: 50%;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  @media screen and (max-width: 576px) {
+    .qoute_title {
+      font-size: 30px;
+      line-height: 60px;
+    }
+  }
+</style>
+
+<div class="qoute_banner">
+  <div class="container">
+    <center>
+      <h3 class="qoute_title mb-5">
+        Discover a world where quality, style, and empowerment converge. Join us
+        on the journey to excellence!
+      </h3>
+      <button class="btn qoute_btn py-3">Request A Qoute</button>
+    </center>
+  </div>
+</div>

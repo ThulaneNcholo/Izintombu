@@ -1,0 +1,70 @@
+{% load static %}
+
+<style>
+  :root {
+    --primary_color: #700c21;
+    --secondary_color: #1563a2;
+  }
+
+  .container_padding {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .title-style {
+    font-size: 44px;
+    line-height: 50px;
+    font-weight: bold;
+  }
+
+  h3.title-style span {
+    font-weight: 100;
+  }
+
+  .service_card {
+    background-color: var(--primary_color);
+    border-radius: 12px;
+  }
+
+  .service_card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures all cards have the same height */
+  }
+
+  .service_description {
+    flex-grow: 1; /* Allows the description to expand and take up available space */
+  }
+
+  .service_icon {
+    font-size: 25px;
+    color: white;
+  }
+
+  .service_title {
+    font-weight: 700;
+    color: white;
+  }
+
+  .service_description {
+    color: lightgray;
+    margin-bottom: 0px;
+  }
+</style>
+
+<div class="container container_padding">
+  <h3 class="title-style mb-lg-5 mb-4">Services we're <span>offering</span></h3>
+
+  <div class="row">
+    {% for data in services %}
+    <div class="col-12 col-md-6 col-lg-3 mb-5">
+      <div class="service_card p-3">
+        <i class="bi bi-gear-fill service_icon"></i>
+        <h4 class="service_title mb-3 mt-3">{{data.title}}</h4>
+        <p class="service_description">{{data.description}}</p>
+      </div>
+    </div>
+    {% endfor %}
+    <!-- end service card  -->
+  </div>
+</div>

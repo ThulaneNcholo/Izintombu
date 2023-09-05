@@ -1,0 +1,128 @@
+{% load static %}
+
+<style>
+  :root {
+    --primary_color: #700c21;
+    --secondary_color: #1563a2;
+  }
+
+  .footer_image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("{% static '/images/footer_image.jpg' %}");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  .company_name {
+    color: white;
+    font-weight: 700;
+  }
+
+  .text_color {
+    color: lightgray;
+  }
+
+  .socials_icon {
+    font-size: 25px;
+    color: white;
+    margin-right: 15px;
+  }
+</style>
+
+<div class="footer_image">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md mb-5">
+        <h2 class="company_name">Izintombu Zodwa Trading (PTY) LTD</h2>
+        <p class="text_color my-3">
+          we're not just a business – we're a partner in your success. We are
+          committed to delivering high-quality products and services that exceed
+          your expectations. Our dedication to excellence, combined with our
+          commitment to diversity and empowerment, sets us apart as an industry
+          leader.
+        </p>
+        <div class="d-flex">
+          <i class="bi bi-facebook socials_icon"></i>
+          <i class="bi bi-linkedin socials_icon"></i>
+          <i class="bi bi-instagram socials_icon"></i>
+        </div>
+      </div>
+      <div class="col-12 col-md mb-5">
+        <h3 class="company_name mb-3">Quick Links</h3>
+        <p class="text_color">Home</p>
+        <p class="text_color">Products</p>
+        <p class="text_color">About</p>
+        <p class="text_color">Contact</p>
+      </div>
+      <div class="col-12 col-md mb-5">
+        <h3 class="company_name mb-3">Wokring Hours</h3>
+        <div class="row">
+          <div class="col d-flex justify-content-start">
+            <p class="text_color">Monday</p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <p class="text_color">08:30 - 16:30</p>
+          </div>
+        </div>
+        <!-- end hour item  -->
+        <div class="row">
+          <div class="col d-flex justify-content-start">
+            <p class="text_color">Tuesday</p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <p class="text_color">08:30 - 16:30</p>
+          </div>
+        </div>
+        <!-- end hour item  -->
+        <div class="row">
+          <div class="col d-flex justify-content-start">
+            <p class="text_color">Wednesday</p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <p class="text_color">08:30 - 16:30</p>
+          </div>
+        </div>
+        <!-- end hour item  -->
+        <div class="row">
+          <div class="col d-flex justify-content-start">
+            <p class="text_color">Thursday</p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <p class="text_color">08:30 - 16:30</p>
+          </div>
+        </div>
+        <!-- end hour item  -->
+        <div class="row">
+          <div class="col d-flex justify-content-start">
+            <p class="text_color">Friday</p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <p class="text_color">08:30 - 15:30</p>
+          </div>
+        </div>
+        <!-- end hour item  -->
+        <div class="row">
+          <div class="col d-flex justify-content-start">
+            <p class="text_color">Saturday</p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <p class="text_color">Closed</p>
+          </div>
+        </div>
+        <!-- end hour item  -->
+        <div class="row">
+          <div class="col d-flex justify-content-start">
+            <p class="text_color">Sunday</p>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <p class="text_color">Closed</p>
+          </div>
+        </div>
+        <!-- end hour item  -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,91 @@
+{% load static %}
+
+<style>
+  :root {
+    --primary_color: #700c21;
+    --secondary_color: #1563a2;
+  }
+
+  .container_padding {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+
+  .title-style {
+    font-size: 44px;
+    line-height: 50px;
+    font-weight: bold;
+  }
+
+  h3.title-style span {
+    font-weight: 100;
+  }
+
+  .why_title {
+    color: var(--secondary_color);
+    font-weight: 700;
+  }
+
+  .why_span {
+    color: var(--primary_color);
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .why_image {
+    height: 400px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .why_sub_heading {
+    color: var(--secondary_color);
+    font-size: 40px;
+    font-weight: bold;
+  }
+</style>
+
+<div class="bg-light">
+  <div class="container container_padding">
+    <h3 class="title-style mb-lg-5 mb-4">Why Choose <span>Us</span></h3>
+    <div class="row">
+      <div class="col-12 mb-5 col-md-6">
+        <img
+          src="{% static '/images/service_image.jpg' %}"
+          alt=""
+          class="why_image"
+        />
+      </div>
+      <div class="col-12 mb-5 col-md-6">
+        <h3 class="why_title mb-4">Izintombi Zodwa Trading.</h3>
+        <p>
+          At Izintombi Zodwa Trading, we understand that when it comes to
+          sourcing Personal Protective Equipment (PPE), Corporate Wear, and
+          School Uniforms, you have choices. However, we firmly believe that our
+          commitment to excellence sets us apart and makes us the natural choice
+          for your needs.
+          <span class="why_span">Here's why you should choose us</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      {% for data in whyUs %}
+      <div class="col-12 col-md-6 col-lg-4 mb-5">
+        <div>
+          <h4 class="d-flex justify-content-end why_sub_heading mb-5">
+            {{ forloop.counter|stringformat:"02d" }}
+          </h4>
+          <div class="d-flex">
+            <p>
+              <span class="why_span">{{data.title}} : </span>
+              {{data.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
